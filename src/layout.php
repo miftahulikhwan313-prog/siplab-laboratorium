@@ -202,7 +202,10 @@ function app_header(string $title): void
     <a href="/">Katalog</a>
     <a href="/items/list.php">Barang</a>
     <a href="/borrowers/list.php">Peminjam</a>
+    <a href="/loans/borrow.php">Peminjaman</a>
+    <a href="/loans/return.php">Pengembalian</a>
 </nav>
+
 <main>
 <?php
     $message = flash_message();
