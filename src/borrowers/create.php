@@ -62,7 +62,7 @@ app_header('Tambah Peminjam');
 
     <label>
         Telepon
-        <input type="text" name="phone" placeholder="Contoh: 081234567890">
+        <input type="number" name="phone" placeholder="Contoh: 081234567890">
     </label>
 
     <div class="form-action">
