@@ -76,3 +76,6 @@ Nama database:
 
 ```text
 LabInventoryDB
+
+
+Proyek ini sudah menyelesaikan fitur frontend MVP.
