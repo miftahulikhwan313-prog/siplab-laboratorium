@@ -35,10 +35,10 @@ Proyek ini dibuat untuk memenuhi tugas praktikum dengan fokus pada:
 
 | No | Nama | Peran | GitHub |
 |---|---|---|---|
-| 1 | [Nama PM] | Project Manager | [username-pm] |
-| 2 | [Nama Backend] | Backend Developer | [username-backend] |
-| 3 | [Nama Frontend] | Frontend Developer | [username-frontend] |
-| 4 | [Nama QA] | QA / Reviewer | [username-qa] |
+| 1 | Miftahul Ihwan | Project Manager | [miftahulikhwan313-prog-pm] |
+| 2 | Muhammad Zaky Rahman | Backend Developer | [muzarahmanDev-backend] |
+| 3 | Fawwaz Muhammad Widiyanto | Frontend Developer | [fawas29-frontend] |
+| 4 | Muhammad Huwaiza Rafi | QA / Reviewer | [HuwaizaRafi-qa] |
 
 ---
 
