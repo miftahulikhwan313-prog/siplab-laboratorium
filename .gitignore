@@ -1,0 +1,14 @@
+# Variabel lingkungan lokal, berisi konfigurasi dan password contoh lokal
+.env
+
+# Log
+logs/
+*.log
+
+# File sistem operasi
+.DS_Store
+Thumbs.db
+
+# Konfigurasi IDE
+.vscode/
+.idea/
