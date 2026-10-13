@@ -75,4 +75,7 @@ Proyek ini dibuat untuk memenuhi tugas praktikum dengan fokus pada:
 Nama database:
 
 ```text
-LabInventoryDB
+LabInventoryDB 
+
+
+Proyek ini sudah menyelesaikan fitur backend MVP. 
