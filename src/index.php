@@ -17,19 +17,10 @@ app_header('Katalog Barang Tersedia');
 <h2>Katalog Barang Tersedia</h2>
 
 <p>
-    <!--
-    BUG DISENGAJA UNTUK SIMULASI QA:
-    Link berikut seharusnya menuju:
-    items/list.php
-
-    Tetapi sengaja ditulis:
-    items/list.ph
-
-    Bug ini akan ditemukan QA pada tahap berikutnya.
-    Jangan diperbaiki dulu sampai Bagian 6.
-    -->
-    <a class="button" href="items/list.ph">Lihat Daftar Barang</a>
+    <a class="button" href="items/list.php">Lihat Daftar Barang</a>
 </p>
+
+
 
 <?php if (count($items) === 0): ?>
     <p class="muted">
