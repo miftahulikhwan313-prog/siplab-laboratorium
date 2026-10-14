@@ -79,3 +79,4 @@ LabInventoryDB
 ```
 
 Proyek ini sudah menyelesaikan fitur backend dan frontend MVP.
+proyek ini selesai 
