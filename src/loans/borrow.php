@@ -20,44 +20,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             $pdo->beginTransaction();
 
-            // Cek apakah barang tersedia.
-            $check = $pdo->prepare(
-                'SELECT Quantity
-                 FROM items
+            // Perbaikan bug:
+            // Stok barang harus dikurangi saat peminjaman.
+            $updateItem = $pdo->prepare(
+                'UPDATE items
+                 SET Quantity = Quantity - 1
                  WHERE ItemCode = ? AND Quantity > 0'
             );
-            $check->execute([$itemCode]);
-            $availableItem = $check->fetch();
+            $updateItem->execute([$itemCode]);
 
-            if (!$availableItem) {
+            if ($updateItem->rowCount() === 0) {
                 throw new RuntimeException('Stok barang habis atau kode barang tidak ditemukan.');
             }
 
-            /*
-             * =====================================================
-             * BUG DISENGAJA UNTUK SIMULASI QA
-             * =====================================================
-             *
-             * Seharusnya di sini ada query untuk mengurangi stok:
-             *
-             * UPDATE items
-             * SET Quantity = Quantity - 1
-             * WHERE ItemCode = ? AND Quantity > 0;
-             *
-             * Namun query tersebut sengaja tidak dijalankan,
-             * sehingga peminjaman tersimpan tetapi stok tidak berkurang.
-             *
-             * Bug ini akan ditemukan oleh QA pada tahap berikutnya.
-             * Jangan diperbaiki dulu sampai Bagian 6.
-             * =====================================================
-             */
-
             // Simpan transaksi peminjaman.
-            $insert = $pdo->prepare(
+            $insertLoan = $pdo->prepare(
                 'INSERT INTO loans (BorrowerID, ItemCode, LoanDate)
                  VALUES (?, ?, CURDATE())'
             );
-            $insert->execute([$borrowerId, $itemCode]);
+            $insertLoan->execute([$borrowerId, $itemCode]);
 
             $pdo->commit();
 
